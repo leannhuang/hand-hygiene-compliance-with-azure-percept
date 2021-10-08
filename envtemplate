@@ -1,0 +1,4 @@
+# Rename to .env before creating deployment manifest from the template
+CONTAINER_REGISTRY_USERNAME=dk361d
+CONTAINER_REGISTRY_PASSWORD=oLtmqnfDu4cT8eQbMAfZH+A111mM2l2n
+CONTAINER_REGISTRY_LOGINSERVER=dk361d.azurecr.io
