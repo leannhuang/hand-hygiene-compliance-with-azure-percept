@@ -78,19 +78,20 @@ async def main():
                 print(f'last_timestamp: {last_timestamp}')
                 print(f'duration: {duration}')
                 print("---------------------")
-
-            old_detect = new_detect
-         
-            json_data = {
+                json_data = {
                     'Date': f'{now}',
                     'Duration': f'{duration}'
                 }
             
-            print('forwarding mesage to output1')
-            msg = Message(json.dumps(json_data))
-            msg.content_encoding = 'utf-8'
-            msg.content_type = 'application/json'
-            await module_client.send_message_to_output(msg, 'output1')
+                print('forwarding mesage to output1')
+                msg = Message(json.dumps(json_data))
+                msg.content_encoding = 'utf-8'
+                msg.content_type = 'application/json'
+                await module_client.send_message_to_output(msg, 'output1')
+
+            old_detect = new_detect
+         
+            
 
         else:
             print('message received on unknown input')
