@@ -9,7 +9,7 @@ The goal of this project is to be able to detect if users washed their hands for
 - Azure Subscription : [Free trial account](https://azure.microsoft.com/en-us/free/)
 - An Azure Container Registry repository or create it by following [here](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-develop-for-linux?view=iotedge-2020-11#create-a-container-registry)
 - Docker for image building
-- Azure Sphere ([Purchase]https://azure.microsoft.com/en-us/services/azure-sphere/get-started/))
+- Azure Sphere ([Purchase](https://azure.microsoft.com/en-us/services/azure-sphere/get-started/))
 
 
 ## Solution Architecture
