@@ -1,5 +1,7 @@
 # hand-hygiene-compliance-with-azure-percept
 
+![scenario](docs/images/hand-washing.png.png)
+
 Did you know that each year in the United States about 75,000 people will die from a hospital acquired infection? Think about it, that is more than 200 people every single day.
 
 The goal of this project is to be able to detect if users washed their hands for over 20 seconds using Azure Percept Vision, and check whether users are using despenser or not through Azure Sphere and PIR Sensor.
