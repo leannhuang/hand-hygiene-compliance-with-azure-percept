@@ -1,6 +1,6 @@
 # hand-hygiene-compliance-with-azure-percept
 
-   ![scenario](docs/images/hand-washing.png.png)
+![scenario](docs/images/hand-washing.png)
 
 Did you know that each year in the United States about 75,000 people will die from a hospital acquired infection? Think about it, that is more than 200 people every single day.
 
