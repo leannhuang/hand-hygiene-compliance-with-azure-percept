@@ -1,5 +1,5 @@
 # Edge Deployment
-Use this information to deploy smart plug modules on your edge device
+Use this information to deploy evaluate modules on your edge device
 
 ## Contents 
 
