@@ -63,12 +63,13 @@ The goal of this project is to be able to detect if users washed their hands for
 11. Run the Stream Analytics job [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-power-bi#run-the-stream-analytics-job)
    
 12.  Create and publish a Power BI report to visualize the data [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-power-bi#create-and-publish-a-power-bi-report-to-visualize-the-data) 
+    
     For the step 6,
     - On the `Fields` pane, expand the table that you specified when you created the output for the Stream Analytics job.
     - Drag `EventEnqueuedUtcTime` to Axis on the Visualizations pane.
     - Drag `Duration` to Values.
     - Select `Table` chart in the `Visualizations` filed
-        ![Solution Arch](docs/images/image_9.png)
+    ![Power BI](docs/images/image_9.png)
     - Save the report.
     
 ### Credits and references
