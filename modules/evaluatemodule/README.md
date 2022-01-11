@@ -17,10 +17,13 @@ Use this information to deploy smart plug modules on your edge device
 ```
    "repository": "<Your container registry login server/respository name>"
 ```
-2. Build and push your IoT Edge solutions to your private ACR 
+
+2. Change the Azure IoT Edge Solution Default Platform to `arm64v8` as in [here](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-develop-for-linux?view=iotedge-2020-11#select-your-target-architecture)
+   
+3. Build and push your IoT Edge solutions to your private ACR 
 Use VSCode as in [here](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-develop-for-linux?view=iotedge-2020-11#build-and-push-your-solution) to build and push your solutions
 
-3. Deploy edge modules to device
+4. Deploy edge modules to device
 Use VSCode as in [here](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-develop-for-linux?view=iotedge-2020-11#deploy-modules-to-device) to deploy the modules to the Percept DK with the above files.
 
 

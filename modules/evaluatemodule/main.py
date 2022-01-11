@@ -19,12 +19,8 @@ import asyncio
 from azure.iot.device.aio import IoTHubDeviceClient
 from azure.iot.device import Message, MethodResponse
 
-CONNECTION_STRING = 'HostName=rg-leann-361dhub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=cCNnva4+Glpbx3ViGHRXCbei9wbf524ymUSAm9q1aDE='
-
-
 async def main():
     # The client object is used to interact with your Azure IoT hub.
-    #continuous_count = 0
     module_client = IoTHubModuleClient.create_from_edge_environment()
 
     first_timestamp = 0
@@ -91,8 +87,6 @@ async def main():
 
             old_detect = new_detect
          
-            
-
         else:
             print('message received on unknown input')
 

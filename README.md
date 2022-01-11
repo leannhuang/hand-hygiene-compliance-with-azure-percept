@@ -11,8 +11,6 @@ The goal of this project is to be able to detect if users washed their hands for
 - Azure Subscription : [Free trial account](https://azure.microsoft.com/en-us/free/)
 - An Azure Container Registry repository or create it by following [here](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-develop-for-linux?view=iotedge-2020-11#create-a-container-registry)
 - Docker for image building
-- Azure Sphere ([Purchase](https://azure.microsoft.com/en-us/services/azure-sphere/get-started/))
-
 
 ## Solution Architecture
 ![Solution Arch](docs/images/sw-arch-hands.png)
@@ -31,10 +29,47 @@ The goal of this project is to be able to detect if users washed their hands for
 
 
 ## Steps
-1. Create a file named `.env` in this folder based on `envtemplate`. Provide values for all variables.
-2. Visit the [evaluatemodule folder](https://github.com/leannhuang/hand-hygiene-compliance-with-azure-percept/tree/main/modules/evaluatemodule) to deploy edge modules on your edge device
+1. Create an Azure Container Registry as in [here](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-portal)
+
+2. Get the registry info including `username`, `password`, and `login server` as in [here](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-tutorial-prepare-registry#enable-admin-account)
+
+3. Create a file named `.env` in this folder based on `envtemplate`. Provide values for all variables.
+
+4. Create your own hands detection model and deploy it to DK as in here
+
+5. Visit the [evaluatemodule folder](https://github.com/leannhuang/hand-hygiene-compliance-with-azure-percept/tree/main/modules/evaluatemodule) to deploy edge modules on your edge device
+
+6. Add a consumer group to your IoT hub [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-power-bi#add-a-consumer-group-to-your-iot-hub)
+
+7. Create Stream Analytics Service [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-power-bi#create-a-stream-analytics-job)
+
+8. Add an input to the Stream Analytics job [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-power-bi#add-an-input-to-the-stream-analytics-job)
+
+9. Add an output to the Stream Analytics job [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-power-bi#add-an-output-to-the-stream-analytics-job)
+
+10. Configure the SQL query of the Stream Analytics [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-power-bi#configure-the-query-of-the-stream-analytics-job)
+
+    Replace the `SQL query` below and fill in the corresponding values
+    ```
+        SELECT
+            *
+        INTO
+            [YourOutputAlias]
+        FROM
+            [YourInputAlias]
+        WHERE Duration IS NOT NULL
+    ```
+
+11. Run the Stream Analytics job [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-power-bi#run-the-stream-analytics-job)
    
-
-
+12.  Create and publish a Power BI report to visualize the data [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-power-bi#create-and-publish-a-power-bi-report-to-visualize-the-data) 
+    For the step 6,
+    - On the `Fields` pane, expand the table that you specified when you created the output for the Stream Analytics job.
+    - Drag `EventEnqueuedUtcTime` to Axis on the Visualizations pane.
+    - Drag `Duration` to Values.
+    - Select `Table` chart in the `Visualizations` filed
+        ![Solution Arch](docs/images/image_9.png)
+    - Save the report.
+    
 ### Credits and references
 - [Azure Percept documentation](https://docs.microsoft.com/en-us/azure/azure-percept/)
