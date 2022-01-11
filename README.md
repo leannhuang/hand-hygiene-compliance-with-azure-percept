@@ -13,7 +13,7 @@ The goal of this project is to be able to detect if users washed their hands for
 - Docker for image building
 
 ## Solution Architecture
-![Solution Arch](docs/images/sw-arch-hands.png)
+![Solution Arch](docs/images/sw-arch-hands-1.png)
 
 ## Device setup
 1. Follow [Quickstart: unbox and assemble your Azure Percept DK components](https://docs.microsoft.com/en-us/azure/azure-percept/quickstart-percept-dk-unboxing) and the next steps.
